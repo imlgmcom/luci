@@ -227,6 +227,8 @@ return view.extend({
 		o.modalonly = false;
 		o.depends('type', 'tcp');
 		o.depends('type', 'udp');
+		o.depends('type', 'http');
+		o.depends('type', 'https');
 		o.cfgvalue = function() {
 			var v = this.super('cfgvalue', arguments);
 			return v&&v!='0'?v:'#';
